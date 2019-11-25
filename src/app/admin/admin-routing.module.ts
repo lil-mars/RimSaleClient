@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule} from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import {EmployeesListComponent} from './components/employees-list/employees-list.component';
 
 const routes: Routes = [
   {
