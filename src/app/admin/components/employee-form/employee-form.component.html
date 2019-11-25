@@ -1,1 +1,64 @@
-<p>employee-form works!</p>
+<form [formGroup]="form" >
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Empleado</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="firstName" matInput type="text" placeholder="Primer Nombre">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="secondName" matInput type="text" placeholder="Segundo Nombre">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="fatherName" matInput type="text" placeholder="Apellido Paterno">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="motherName" matInput type="text" placeholder="Apellido Materno">
+            </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="rol" matInput type="text" placeholder="rol">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="user" matInput type="text" placeholder="user">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="password" matInput type="password" placeholder="contraseña">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="submit" color="primary">Registrar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+
