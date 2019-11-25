@@ -15,6 +15,8 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { CalendarComponent } from './components/reports/calendar/calendar.component';
 import { ReportsSummaryComponent } from './components/reports/reports-summary/reports-summary.component';
 import { OthersComponent } from './components/reports/others/others.component';
+import { TireListComponent } from './components/tire-list/tire-list.component';
+import { TireFormComponent } from './components/tire-form/tire-form.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { OthersComponent } from './components/reports/others/others.component';
     CalendarComponent,
     OthersComponent,
     ReportsSummaryComponent,
-    EmployeeFormComponent
+    EmployeeFormComponent,
+    TireListComponent,
+    TireFormComponent
   ],
   imports: [
     CommonModule,
