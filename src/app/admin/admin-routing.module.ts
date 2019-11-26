@@ -6,7 +6,9 @@ import { ReportsComponent } from './components/reports/reports.component';
 import {EmployeesListComponent} from './components/employees-list/employees-list.component';
 import {TireListComponent} from './components/tire-list/tire-list.component';
 import {TireFormComponent} from './components/tire-form/tire-form.component';
+
 import {EmployeeEditComponent} from './components/employee-edit/employee-edit.component';
+import {TireEditComponent} from './components/tire-list/tire-edit/tire-edit.component';
 
 const routes: Routes = [
   {
@@ -38,6 +40,10 @@ const routes: Routes = [
         path: 'tires/create',
         component: TireFormComponent
       },
+      {
+        path: 'tires/edit/:id',
+        component: TireEditComponent
+      }
     ]
   }
 ];
