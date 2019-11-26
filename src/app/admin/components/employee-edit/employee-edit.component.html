@@ -31,17 +31,17 @@
         <div class="col-xs">
           <mat-form-field>
             <input formControlName="motherLastName" matInput type="text" placeholder="Apellido Materno">
-            </mat-form-field>
+          </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col-xs">
-            <mat-form-field>
-              <mat-label>Rol</mat-label>
-              <mat-select formControlName="roleId" >
-                <mat-option  [value]="1">Admin</mat-option>
-                <mat-option [value]="2">Empleado</mat-option>
-              </mat-select>
+          <mat-form-field>
+            <mat-label>Rol</mat-label>
+            <mat-select formControlName="roleId" >
+              <mat-option  [value]="1">Admin</mat-option>
+              <mat-option [value]="2">Empleado</mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
       </div>
@@ -61,7 +61,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button [disabled]="form.invalid"  mat-raised-button type="submit" color="primary">Registrar</button>
+      <button [disabled]="form.invalid"  mat-raised-button type="submit" color="primary">Actualizar</button>
     </mat-card-actions>
   </mat-card>
 </form>

@@ -1,9 +1,10 @@
 export class Employee {
   public firstName: string;
   public secondName: string;
-  public fatherName: string;
-  public motherName: string;
-  public phone: string;
-  public role: number;
+  public lastName: string;
+  public motherLastName: string;
+  public nick: string;
+  public password: string;
+  public roleId: number;
   constructor() {  }
 }

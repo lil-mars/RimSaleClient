@@ -17,6 +17,7 @@ import { ReportsSummaryComponent } from './components/reports/reports-summary/re
 import { OthersComponent } from './components/reports/others/others.component';
 import { TireListComponent } from './components/tire-list/tire-list.component';
 import { TireFormComponent } from './components/tire-form/tire-form.component';
+import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TireFormComponent } from './components/tire-form/tire-form.component';
     ReportsSummaryComponent,
     EmployeeFormComponent,
     TireListComponent,
-    TireFormComponent
+    TireFormComponent,
+    EmployeeEditComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,7 @@ import { TireFormComponent } from './components/tire-form/tire-form.component';
     FormsModule,
     CommonModule,
     AdminRoutingModule,
-    FullCalendarModule
+    FullCalendarModule,
     ]
 })
 export class AdminModule {

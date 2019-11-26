@@ -1,38 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+import {EmployeeService} from './../../../core/services/employee/employee.service';
+import {Employee} from './../../../core/models/employee.model';
 
 @Component({
   selector: 'app-employees-list',
   templateUrl: './employees-list.component.html',
-  styleUrls: ['./employees-list.component.css']
+  styleUrls: ['./employees-list.component.css'],
 })
 export class EmployeesListComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
 
-  employess = [];
-  constructor() { }
+  private employees: Employee[] = [];
+  displayedColumns: string[] = ['id', 'completName', 'rol', 'actions'];
+
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
+    this.fetchEmployess();
+  }
+
+  fetchEmployess() {
+    this.employeeService.getAllEmployee().subscribe(employees => {
+      this.employees = employees;
+      // console.log(employees);
+    } );
+  }
+
+  deleteEmployee(id: number) {
+    this.employeeService.deleteEmployee(id)
+      .subscribe(rta => {
+        this.fetchEmployess();
+      });
   }
 
 }

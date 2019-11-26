@@ -6,6 +6,7 @@ import { ReportsComponent } from './components/reports/reports.component';
 import {EmployeesListComponent} from './components/employees-list/employees-list.component';
 import {TireListComponent} from './components/tire-list/tire-list.component';
 import {TireFormComponent} from './components/tire-form/tire-form.component';
+import {EmployeeEditComponent} from './components/employee-edit/employee-edit.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: 'employees/create',
         component: EmployeeFormComponent
+      },
+      {
+        path: 'employees/edit/:id',
+        component: EmployeeEditComponent
       },
       {
         path: 'tires',
