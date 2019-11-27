@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   url_employee: 'http://localhost:3000/user',
+  url_client: 'http://localhost:3000/client',
 };
 
 /*

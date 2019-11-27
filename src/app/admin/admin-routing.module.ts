@@ -9,6 +9,9 @@ import {TireFormComponent} from './components/tire-form/tire-form.component';
 
 import {EmployeeEditComponent} from './components/employee-edit/employee-edit.component';
 import {TireEditComponent} from './components/tire-list/tire-edit/tire-edit.component';
+import {ClientsListComponent} from './components/clients-list/clients-list.component';
+import {ClientFormComponent} from './components/client-form/client-form.component';
+import {ClientEditComponent} from './components/client-edit/client-edit.component';
 
 const routes: Routes = [
   {
@@ -43,7 +46,19 @@ const routes: Routes = [
       {
         path: 'tires/edit/:id',
         component: TireEditComponent
-      }
+      },
+      {
+        path: 'clients',
+        component: ClientsListComponent
+      },
+      {
+        path: 'clients/create',
+        component: ClientFormComponent
+      },
+      {
+        path: 'clients/edit/:id',
+        component: ClientEditComponent
+      },
     ]
   }
 ];

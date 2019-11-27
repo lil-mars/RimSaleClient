@@ -1,0 +1,49 @@
+<form [formGroup]="form" (ngSubmit)="saveClient($event)" class="clients-form" >
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title>Cliente</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <mat-form-field class="example-full-width">
+        <input formControlName="ci" matInput type="number" placeholder="CI">
+      </mat-form-field>
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <input formControlName="firstName" matInput type="text" placeholder="Primer Nombre">
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <input formControlName="secondName" matInput type="text" placeholder="Segundo Nombre">
+        </mat-form-field></td>
+      </tr></table>
+
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <input formControlName="lastName" matInput type="text" placeholder="Apellido Paterno">
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <input formControlName="motherLastName" matInput type="text" placeholder="Apellido Materno">
+        </mat-form-field></td>
+      </tr></table>
+
+      <mat-form-field class="example-full-width">
+        <input formControlName="phone" matInput type="number" placeholder="Numero Celular">
+      </mat-form-field>
+
+
+      <label class="example-margin">Estado: </label>
+      <mat-radio-group [(ngModel)]="labelPosition" formControlName="active">
+        <mat-radio-button class="example-margin" value="1">Activo</mat-radio-button>
+        <mat-radio-button class="example-margin" value="0">Inactivo</mat-radio-button>
+      </mat-radio-group>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button [disabled]="form.invalid"  mat-raised-button type="submit" color="primary">Registrar</button>
+    </mat-card-actions>
+
+  </mat-card>
+</form>

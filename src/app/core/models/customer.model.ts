@@ -1,9 +1,10 @@
 export class Customer {
   public firstName: string;
   public secondName: string;
-  public fatherName: string;
-  public motherName: string;
+  public lastName: string;
+  public motherLastName: string;
   public phone: string;
-  public ci: string;
+  public ci: number;
+  public active: boolean;
   constructor() {  }
 }
