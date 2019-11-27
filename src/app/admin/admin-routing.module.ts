@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { ReportsComponent } from './components/reports/reports.component';
-import {EmployeesListComponent} from './components/employees-list/employees-list.component';
-import {TireListComponent} from './components/tire-list/tire-list.component';
-import {TireFormComponent} from './components/tire-form/tire-form.component';
-
+import { EmployeesListComponent } from './components/employees-list/employees-list.component';
+import { TireListComponent } from './components/tire-list/tire-list.component';
+import { TireFormComponent } from './components/tire-form/tire-form.component';
 import {EmployeeEditComponent} from './components/employee-edit/employee-edit.component';
 import {TireEditComponent} from './components/tire-list/tire-edit/tire-edit.component';
 import {ClientsListComponent} from './components/clients-list/clients-list.component';
 import {ClientFormComponent} from './components/client-form/client-form.component';
 import {ClientEditComponent} from './components/client-edit/client-edit.component';
+import { SalesListComponent } from "./components/sales/sales-list/sales-list.component";
+import { SalesEditComponent } from "./components/sales/sales-edit/sales-edit.component";
+import { SalesCreateComponent } from "./components/sales/sales-create/sales-create.component";
 
 const routes: Routes = [
   {
@@ -59,6 +61,19 @@ const routes: Routes = [
         path: 'clients/edit/:id',
         component: ClientEditComponent
       },
+      // Sales Routes
+      {
+        path: 'sales',
+        component: SalesListComponent
+      },
+      {
+        path: 'sales/create',
+        component: SalesCreateComponent
+      },
+      {
+        path: 'sales/edit/:id',
+        component: SalesEditComponent
+      }
     ]
   }
 ];
@@ -67,4 +82,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {
+}

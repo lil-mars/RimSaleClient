@@ -22,6 +22,9 @@ import { TireEditComponent} from './components/tire-list/tire-edit/tire-edit.com
 import { ClientsListComponent } from './components/clients-list/clients-list.component';
 import { ClientFormComponent } from './components/client-form/client-form.component';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
+import { SalesListComponent } from './components/sales/sales-list/sales-list.component';
+import { SalesCreateComponent } from './components/sales/sales-create/sales-create.component';
+import { SalesEditComponent } from './components/sales/sales-edit/sales-edit.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
     TireEditComponent,
     ClientsListComponent,
     ClientFormComponent,
-    ClientEditComponent
+    ClientEditComponent,
+    SalesListComponent,
+    SalesCreateComponent,
+    SalesEditComponent
   ],
   imports: [
     CommonModule,
