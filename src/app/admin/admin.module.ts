@@ -19,6 +19,9 @@ import { TireListComponent } from './components/tire-list/tire-list.component';
 import { TireFormComponent } from './components/tire-form/tire-form.component';
 import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 import { TireEditComponent} from './components/tire-list/tire-edit/tire-edit.component';
+import { SalesListComponent } from './components/sales/sales-list/sales-list.component';
+import { SalesCreateComponent } from './components/sales/sales-create/sales-create.component';
+import { SalesEditComponent } from './components/sales/sales-edit/sales-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { TireEditComponent} from './components/tire-list/tire-edit/tire-edit.com
     TireListComponent,
     TireFormComponent,
     EmployeeEditComponent,
-    TireEditComponent
+    TireEditComponent,
+    SalesListComponent,
+    SalesCreateComponent,
+    SalesEditComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,58 @@
+<form [formGroup]="form" (ngSubmit)="saveEmployee($event)">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Nueva venta</mat-card-title>
+      <br>
+      <button class="mat-button">
+        <mat-card-subtitle>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          Agregar Llanta
+        </mat-card-subtitle>
+
+      </button>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="row">
+
+        <div class="col-4">
+          <mat-form-field>
+            <mat-label>Llanta</mat-label>
+            <mat-select formControlName="roleId">
+              <mat-option [value]="1">Nissan A:12 C:400</mat-option>
+              <mat-option [value]="2">Nissan A:13 C:400 </mat-option>
+              <mat-option [value]="3">Toyota A:13 C:400</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field>
+            <input formControlName="secondName" matInput type="text" placeholder="Cantidad">
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field>
+            <input formControlName="secondName" matInput value="1200" type="text" placeholder="Precio">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field>
+            <input formControlName="totalAmount" matInput type="number" placeholder="Monto">
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field>
+            <input formControlName="totalAmountDiscount" matInput type="number" placeholder="Monto con descuento">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="form.invalid" mat-raised-button type="submit" color="primary">Registrar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<s></s>
